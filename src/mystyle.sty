@@ -166,33 +166,42 @@
 %For pretty source code
 \usepackage{listings}
 \usepackage{color}
+\usepackage{newcomputermodern}
 
 \definecolor{codegwhite}{rgb}{1,1,1}
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
 \definecolor{backcolour}{rgb}{0.9,0.9,0.9}
- 
+
+% % Custom Font
+% \setmonofont {} [
+%   % any combination of these three lines trigger the problem
+%   % CharacterVariant={85:2} % Lua/Xe both break
+%   % StylisticSet=20         % only breaks in XeLaTeX
+%   % RawFeature=+ss20        % only breaks in XeLaTeX
+% ]
+
 \lstdefinestyle{mystyle}{
-    backgroundcolor=\color{backcolour}, 
+    backgroundcolor=\color{backcolour},
     %basicstyle=\scriptsize,
     commentstyle=\color{codegreen},
     keywordstyle=\color{magenta},
     basicstyle=\ttfamily,
     stringstyle=\color{codepurple},
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,                                   
-    showspaces=false,                
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    showspaces=false,
     showstringspaces=false,
-    showtabs=false,                  
+    showtabs=false,
     frame=single,
     tabsize=2,
     xleftmargin=0in,
     morekeywords={NULL, true, false, boolean},
 }
- 
+
 \lstset{style=mystyle}
 
 \lstdefinelanguage{OldC}{%
@@ -213,7 +222,7 @@
 \newcommand{\fakedosoutput}[1]{{\lstset{showlines=true, backgroundcolor=\color{Black}, basicstyle=\ttfamily\color{White}} \tcode{#1}}}
 
 
-% To fix table of content spacing 
+% To fix table of content spacing
 \usepackage{tocloft}
 %\usepackage[tocflat]{tocstyle}
 %\usetocstyle{standard}
